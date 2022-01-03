@@ -13,4 +13,4 @@ Next Steps:
   start stream etc.
 
 
-# This was originally HTTPD Server Persistent Sockets IDF Example
+Note: This was originally HTTPD Server Persistent Sockets IDF Example
