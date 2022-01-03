@@ -1,0 +1,20 @@
+{
+    "project_name":       "bootloader",
+    "project_path":       "/home/geeko/esp/esp-idf/components/bootloader/subproject",
+    "build_dir":          "/home/geeko/esp/code/webserver/bootloader",
+    "config_file":        "/home/geeko/esp/code/webserver/sdkconfig",
+    "config_defaults":    "",
+    "app_elf":            "bootloader.elf",
+    "app_bin":            "bootloader.bin",
+    "git_revision":       "v4.3-dirty",
+    "target":             "esp32",
+    "phy_data_partition": "",
+    "monitor_baud" :      "115200",
+    "monitor_toolprefix": "xtensa-esp32-elf-",
+    "config_environment" : {
+        "COMPONENT_KCONFIGS" : "/home/geeko/esp/esp-idf/components/efuse/Kconfig;/home/geeko/esp/esp-idf/components/esp32/Kconfig;/home/geeko/esp/esp-idf/components/esp_common/Kconfig;/home/geeko/esp/esp-idf/components/esp_system/Kconfig;/home/geeko/esp/esp-idf/components/log/Kconfig;/home/geeko/esp/esp-idf/components/newlib/Kconfig;/home/geeko/esp/esp-idf/components/spi_flash/Kconfig",
+        "COMPONENT_KCONFIGS_PROJBUILD" : "/home/geeko/esp/esp-idf/components/bootloader/Kconfig.projbuild;/home/geeko/esp/esp-idf/components/esptool_py/Kconfig.projbuild;/home/geeko/esp/esp-idf/components/partition_table/Kconfig.projbuild"
+    },
+    "build_components" : [ "bootloader", "bootloader_support", "efuse", "esp32", "esp_common", "esp_hw_support", "esp_rom", "esp_system", "esptool_py", "hal", "log", "main", "micro-ecc", "newlib", "partition_table", "soc", "spi_flash", "xtensa", "" ],
+    "build_component_paths" : [ "/home/geeko/esp/esp-idf/components/bootloader", "/home/geeko/esp/esp-idf/components/bootloader_support", "/home/geeko/esp/esp-idf/components/efuse", "/home/geeko/esp/esp-idf/components/esp32", "/home/geeko/esp/esp-idf/components/esp_common", "/home/geeko/esp/esp-idf/components/esp_hw_support", "/home/geeko/esp/esp-idf/components/esp_rom", "/home/geeko/esp/esp-idf/components/esp_system", "/home/geeko/esp/esp-idf/components/esptool_py", "/home/geeko/esp/esp-idf/components/hal", "/home/geeko/esp/esp-idf/components/log", "/home/geeko/esp/esp-idf/components/bootloader/subproject/main", "/home/geeko/esp/esp-idf/components/bootloader/subproject/components/micro-ecc", "/home/geeko/esp/esp-idf/components/newlib", "/home/geeko/esp/esp-idf/components/partition_table", "/home/geeko/esp/esp-idf/components/soc", "/home/geeko/esp/esp-idf/components/spi_flash", "/home/geeko/esp/esp-idf/components/xtensa", "" ]
+}
