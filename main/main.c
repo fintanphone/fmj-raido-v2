@@ -137,6 +137,33 @@ static esp_err_t adder_put_handler(httpd_req_t *req)
     return ESP_OK;
 }
 
+static esp_err_t stations_get_handler(httpd_req_t *req)
+{
+
+ESP_LOGI(TAG, "you entered your custom handler");
+
+// Fint code here:
+
+char *simple_response = NULL;
+
+httpd_resp_set_status(req, HTTPD_200);
+// httpd_resp_set_type(req, "application/json");
+
+// Put some simple text in the buffer which will be sent out as a httpd response
+
+asprintf(&simple_response,"Hello Simple World");
+
+httpd_resp_send(req, simple_response, strlen(simple_response));
+
+free(simple_response);
+
+return ESP_OK;
+
+}
+
+
+
+
 /* Maintain a variable which stores the number of times
  * the "/adder" URI has been visited */
 static unsigned visitors = 0;
@@ -162,6 +189,15 @@ static const httpd_uri_t adder_put = {
     .user_ctx = &visitors
 };
 
+static const httpd_uri_t stations_get = {
+    .uri     = "/stations",
+    .method  = HTTP_GET,
+    .handler = stations_get_handler,
+    .user_ctx = &visitors
+};
+
+
+
 static httpd_handle_t start_webserver(void)
 {
     httpd_config_t config = HTTPD_DEFAULT_CONFIG();
@@ -175,6 +211,7 @@ static httpd_handle_t start_webserver(void)
         httpd_register_uri_handler(server, &adder_get);
         httpd_register_uri_handler(server, &adder_put);
         httpd_register_uri_handler(server, &adder_post);
+        httpd_register_uri_handler(server, &stations_get);
         return server;
     }
 
