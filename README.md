@@ -1,15 +1,16 @@
-# HTTPD Server Persistent Sockets Example
+# HTTPD Server - Select Radio Station from HTML Combo box.  
 
-The Example consists of HTTPD server persistent sockets demo.
-This sort of persistency enables the server to have independent sessions/contexts per client.
+Radio station full list is maintained in JSON format
 
-* Open the project configuration menu (`idf.py menuconfig`) to configure Wi-Fi or Ethernet. See "Establishing Wi-Fi or Ethernet Connection" section in [examples/protocols/README.md](../../README.md) for more details.
+- Started with Persistent Sockets demo
+- Created a new handler (stations_get) for url : /local ip/stations
+        - This handler currently just prints out Hello Simple World
 
-* In order to test the HTTPD server persistent sockets demo :
-    1. compile and burn the firmware `idf.py -p PORT flash`
-    2. run `idf.py -p PORT monitor` and note down the IP assigned to your ESP module. The default port is 80
-    3. run the test script "python scripts/adder.py \<IP\> \<port\> \<N\>"
-        * the provided test script sends (POST) numbers from 1 to N to the server which has a URI POST handler for adding these numbers into an accumulator that is valid throughout the lifetime of the connection socket, hence persistent
-        * the script does a GET before closing and displays the final value of the accumulator
+Next Steps:
+- This handler will read from a fixed web server with station list.
+  Any item selected from list will be handled by a new POST handler
+  which will be used to select stations, change stations, stop and 
+  start stream etc.
 
-See the README.md file in the upper level 'examples' directory for more information about examples.
+
+# This was originally HTTPD Server Persistent Sockets IDF Example
